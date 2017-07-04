@@ -1,0 +1,85 @@
+/* 重构 */
+.layui-box {
+	padding: 20px;
+}
+.layui-tab {
+	margin: 0;
+}
+.layui-tab-title {
+	background: #f2f2f2;
+}
+.layui-tab-title .layui-this {
+	background: #fff;
+}
+.layui-tab-title li:first-child > i {
+	display: none;
+}
+
+/* admin */
+#tabBody {
+	position: fixed;
+	left: 200px;
+	width: 100%;
+	z-index: 1;
+}
+#main {
+	padding-top: 50px;
+}
+.iconfont {
+	font-size: 14px;
+}
+.logo {
+	display: inline-block;
+	height: 60px;
+	line-height: 60px;
+	font-size: 120%;
+	font-weight: bold;
+	color: #393D49;
+	text-shadow: 0 0 3px #2B2E37;
+}
+.logo img {
+	margin-left: 15px;
+	max-height: 50px;
+	/* -webkit-filter: grayscale(1); 
+	    filter: grayscale(1);
+	    filter: gray; */
+}
+.admin-logo-bg {
+	margin: 10% auto 0 auto;
+    width: 300px;
+    height: 100px;
+    background: url(../images/logo2.png) no-repeat;
+    background-size: cover;
+    opacity: .8;
+}
+.admin-table-info td {
+	padding: 15px;
+}
+.admin-table-td-info {
+	background: #f2f2f2;
+	text-align: center;
+}
+.admin-tr-title {
+	background: #f2f2f2;
+}
+.admin-input-inline {
+	width: 50%!important;
+}
+.admin-item-inline {
+	margin-bottom: 0;
+}
+.admin-text-success {
+	color: #5FB878;
+}
+.header .layui-nav {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0;
+	background: none;
+}
+.footer{
+	text-align: center;
+	line-height: 44px;
+	color: #8D8D8D;
+}

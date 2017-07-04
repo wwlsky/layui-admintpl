@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>后台管理系统 - By梵天</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="assets/js/plugins/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body class="layui-bg-cyan">
+    
+    <div class="admin-login-block">
+        <div class="admin-login-text">
+            ADMIN <span>订单系统</span>
+        </div>
+        <div class="login-font">
+            <span>系统登录</span>
+        </div>
+        <div class="admin-login-form">
+            <form class="layui-form" action="" lay-filter="login">
+                <div class="layui-form-item">
+                    <div class="layui-input-block admin-login-input">
+                        <input type="text" name="username" required lay-verify="required" placeholder="登录账号" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block admin-login-input">
+                        <input type="password" name="password" required lay-verify="required" placeholder="登录密码" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block admin-login-input">
+                        <button class="layui-btn admin-login-btn" lay-submit>登录</button>
+                    </div>
+                </div>
+            </form>
+            <div class="admin-login-copy">
+                <p>后台管理系统模板 by 梵天 - 账号密码随便输</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/plugins/layui/layui.js"></script>
+    <script>
+        layui.use(['layer', 'form'], function(){
+            var $ = layui.jquery
+                ,layer = layui.layer
+                ,form = layui.form();
+
+            form.on('submit(login)', function() {
+                var loading = layer.load(2);
+                setTimeout(function() {
+                    layer.close(loading);
+                    location.href = 'index.html';
+                }, 1000)
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>

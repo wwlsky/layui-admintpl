@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>后台管理系统 - By梵天</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="assets/js/plugins/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_mpw4gvnu4xk9y66r.css">
+    <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body>
+    
+    <div class="layui-layout layui-layout-admin">
+
+        <!-- header -->
+        <div class="layui-header header">
+        	<div class="layui-main">
+        		<!-- <div class="logo">CDNTY - 成都南台月</div> -->
+                <div class="logo">
+                    <img src="assets/images/logo.png" alt="南台月订单系统">
+                </div>
+	            <ul class="layui-nav">
+	                <li class="layui-nav-item">
+	                    <a href="javascript:;" onclick="toggleFullScreen();">
+	                    	<i class="iconfont icon-quanping"></i> 全屏显示
+	                    </a>
+	                </li>
+	                <li class="layui-nav-item">
+	                    <a href="javascript:;"> 超级管理员
+	                    	<dl class="layui-nav-child">
+		                    	<dd>
+		                    		<a href="javascript:;">
+		                    			<i class="iconfont icon-password"></i> 修改密码
+		                    		</a>
+		                    	</dd>
+		                    	<dd>
+		                    		<a href="javascript:;">
+		                    			<i class="iconfont icon-tuichu"></i> 切换账号
+		                    		</a>
+		                    	</dd>
+		                    </dl>
+	                    </a>
+	                </li>
+	                <li class="layui-nav-item">
+	                    <a href="login.html">
+	                    	<i class="iconfont icon-tuichu"></i> 退出
+	                    </a>
+	                </li>
+	            </ul>
+        	</div>
+        </div>
+
+        <!-- side -->
+        <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+            	<ul class="layui-nav layui-nav-tree" lay-filter="navBar">
+            		<li class="layui-nav-item layui-nav-itemed">
+            			<a href="javascript:;">
+            				<i class="iconfont icon-wodedingdan"></i> &nbsp;订单信息
+            			</a>
+            			<dl class="layui-nav-child">
+            				<dd data-url="./views/list.html" data-id="1" data-hash="order-list"><a href="javascript:;">
+                                <i class="layui-icon">&#xe602;</i> <span>订单列表</span></a>
+                            </dd>
+            				<dd data-url="./views/logs.html" data-id="2" data-hash="order-log"><a href="javascript:;">
+                                <i class="layui-icon">&#xe602;</i> <span>操作日志</span></a>
+                            </dd>
+            			</dl>
+            		</li>
+            		<li class="layui-nav-item">
+            			<a href="javascript:;">
+            				<i class="iconfont icon-shijian"></i> &nbsp;生产信息
+            			</a>
+            			<dl class="layui-nav-child">
+            				<dd data-url="./views/list-pro-start.html" data-id="3" data-hash="order-pro-start"><a href="javascript:;">
+                                <i class="layui-icon">&#xe602;</i> <span>待生产</span></a>
+                            </dd>
+            				<dd data-url="./views/list-pro-in.html" data-id="4" data-hash="order-pro-in"><a href="javascript:;">
+                                <i class="layui-icon">&#xe602;</i> <span>生产中</span></a>
+                            </dd>
+            				<dd data-url="./views/list-pro-end.html" data-id="5" data-hash="order-pro-end"><a href="javascript:;">
+                                <i class="layui-icon">&#xe602;</i> <span>生产结束</span></a>
+                            </dd>
+            			</dl>
+            		</li>
+            		<li class="layui-nav-item">
+            			<a href="javascript:;">
+            				<i class="iconfont icon-yonghu"></i> &nbsp;系统设置
+            			</a>
+            			<dl class="layui-nav-child">
+                            <dd data-url="./views/base.html" data-id="6" data-hash="base"><a href="javascript:;">
+                                <i class="layui-icon">&#xe602;</i> <span>基础配置</span></a>
+                            </dd>
+            				<dd data-url="./views/role.html" data-id="7" data-hash="role"><a href="javascript:;">
+                                <i class="layui-icon">&#xe602;</i> <span>角色管理</span></a>
+                            </dd>
+            				<dd data-url="./views/account.html" data-id="8" data-hash="account"><a href="javascript:;">
+                                <i class="layui-icon">&#xe602;</i> <span>账号管理</span></a>
+                            </dd>
+            			</dl>
+            		</li>
+            	</ul>
+            </div>
+        </div>
+
+        <!-- body -->
+        <div class="layui-body">
+        	<div class="layui-tab layui-tab-brief" lay-allowClose="true" lay-filter="tabMain">
+				<ul class="layui-tab-title" id="tabBody">
+					<li class="layui-this" lay-id="">控制面板</li>
+				</ul>
+				<div class="layui-tab-content" id="main">
+					<div class="layui-tab-item layui-show"></div>
+				</div>
+			</div>
+        </div>
+		
+		<!-- footer -->
+        <div class="layui-footer footer">
+        	<div class="layui-main">
+        		<p>@2017 订单生产系统 by 梵天</p>
+        	</div>
+        </div>
+
+    </div>
+
+	<div id="tpl" class="layui-hide"></div>
+
+    <script src="assets/js/plugins/layui/layui.js"></script>
+    <script src="assets/js/config.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<div class="layui-main">
+    
+    <blockquote class="layui-elem-quote layui-quote-nm">
+        客服操作订单日志记录
+    </blockquote>
+
+    <table class="layui-table">
+        <colgroup>
+            <col width="200">
+            <col width="200">
+            <col width="200">
+            <col width="200">
+            <col>
+        </colgroup>
+        <thead>
+            <tr>
+                <th>操作账号</th>
+                <th>真实姓名</th>
+                <th>操作动作</th>
+                <th>操作订单</th>
+                <th>操作时间</th>
+            </tr> 
+        </thead>
+        <tbody>
+            <tr>
+                <td>admin</td>
+                <td>超级管理员</td>
+                <td>关闭订单</td>
+                <td>1499125819067</td>
+                <td>1989-10-14</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="11">
+                    <div class="pages-logs"></div>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+</div>
+
+<script>
+    (function(){
+        adminPage.page($('.pages-logs'), 100);
+    })();
+</script>

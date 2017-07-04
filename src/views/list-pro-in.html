@@ -1,0 +1,99 @@
+<div class="layui-main">
+
+    <div class="layui-form">
+
+        <blockquote class="layui-elem-quote">
+            <button class="layui-btn layui-btn-danger"" id="tplProEnd">
+                <i class="layui-icon">&#xe62c;</i> 批量结束
+            </button>
+        </blockquote>
+
+        <table class="layui-table">
+            <colgroup>
+                <col width="50">
+                <col width="150">
+                <col width="150">
+                <col width="150">
+                <col width="150">
+                <col width="200">
+                <col width="200">
+                <col width="200">
+                <col width="150">
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th><input type="checkbox" name="" lay-skin="primary" lay-filter="allChoose"></th>
+                    <th>订单编号</th>
+                    <th>品种</th>
+                    <th>规格</th>
+                    <th>数量</th>
+                    <th>收货时间</th>
+                    <th>配送方式</th>
+                    <th>配送员电话</th>
+                    <th>生产状态</th>
+                    <th>操作</th>
+                </tr> 
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" name="" lay-skin="primary"></td>
+                    <td>1499125819067</td>
+                    <td>蛋糕</td>
+                    <td>18CM</td>
+                    <td>20</td>
+                    <td>1989-10-14</td>
+                    <td>公司配送</td>
+                    <td>15388888888</td>
+                    <td>生产中</td>
+                    <td>
+                        <button class="layui-btn layui-btn-small">结束生产</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" lay-skin="primary"></td>
+                    <td>1499125819067</td>
+                    <td>蛋糕</td>
+                    <td>18CM</td>
+                    <td>20</td>
+                    <td>1989-10-14</td>
+                    <td>公司配送</td>
+                    <td>15388888888</td>
+                    <td>生产中</td>
+                    <td>
+                        <button class="layui-btn layui-btn-small">结束生产</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" lay-skin="primary"></td>
+                    <td>1499125819067</td>
+                    <td>蛋糕</td>
+                    <td>18CM</td>
+                    <td>20</td>
+                    <td>1989-10-14</td>
+                    <td>公司配送</td>
+                    <td>15388888888</td>
+                    <td>生产中</td>
+                    <td>
+                        <button class="layui-btn layui-btn-small">结束生产</button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="11">
+                        <div class="pages-pro-in"></div>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+</div>
+
+<script>
+    (function(){
+        form.render();
+        adminPage.page($('.pages-pro-in'), 100);
+    })();
+</script>
