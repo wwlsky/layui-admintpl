@@ -10,6 +10,7 @@ layui.config({
 	,version: new Date().getTime()
 }).use('adminMain', function(adminMain) {
 	adminMain.init();
+    form.render();
     //全选
     form.on('checkbox(allChoose)', function(data){
         var child = $(data.elem).parents('table').find('tbody input[type="checkbox"]');
